@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vanjie - Войти</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/page.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  </head>
+  <body>
+    <div class="container">
+
+       <header class="header">
+	       <a id="logo" href="Main.html"></a>
+           <section class="search">
+              <section class="wrapper">
+                 <input type="search" id="search" placeholder="Поиск..." />
+                 <button class="icon"><i class="fa fa-search"></i></button>
+              </section>
+           </section>
+       </header>
+
+       <section class="menu">
+           <ul>
+	           <li><a href="movies.html">Кино</a></li>
+	           <li><a href="nonfiction.html">Нон-фикшн</a></li>
+	           <li><a href="guide.html">Гид</a></li>
+	           <li class="active"><a href="autorization.html">Войти</a></li>
+           </ul>
+       </section>
+
+       <slider class="slider">
+       </slider>
+
+       <section class="article">
+            <section class="box8">
+                <a href="#openModal">Авторизация
+                </a>
+
+                <div id="openModal" class="modalDialog">
+                    <div>
+                        <a href="#close" title="Закрыть" class="close">X
+                        </a>
+                          <form name="autorization">
+                              <p><label for="email">Email:</label></p>
+                              <p><input type="email" id="email" placeholder="Введите адрес эл.почты" required></p>
+                              <p><label for="password">Пароль:</label></p>
+                              <p><input type="password" id="password" minlength="5" placeholder="Введите пароль" required></p>
+                              <button>Войти</button>
+                          </form>
+                    </div>
+                </div>
+            </section>
+            <section class="article"></section>
+       </section>
+
+      <footer class="footer">
+	         <p> 2020, Vanjie</p>
+	         <p>Сайт разработан студией DQueens</p>
+      </footer>
+
+     </div>
+  </body>
+</html>

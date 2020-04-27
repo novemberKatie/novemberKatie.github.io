@@ -1,0 +1,340 @@
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+h3, p {
+text-align: center;	
+}
+
+.container {
+    display: grid;
+    background: whitesmoke;
+	grid-template-columns: 100px auto 250px;
+	grid-template-rows: 100px 40px 300px auto 200px /*300px*/ 50px;
+	grid-template-areas: 
+		"header header header"
+		"menu menu menu"
+        "slider slider slider"
+        "main  main sidebar"
+        "main  main sidebar"
+		"footer footer footer";
+	/*grid-column-gap: 10px;*/
+	justify-items: stretch;
+	align-items: stretch;
+    background-image: url(../img/jacob4.jpg);      
+    background-position: center center;      
+    background-repeat: no-repeat;      
+    background-attachment: fixed;      
+    background-size: cover;      
+    background-color: #e69393;
+}
+
+.header {
+	display: grid;
+	grid-area: header;
+	background-color: #a349a3;
+	position:fixed; 
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100px;
+ }
+
+.menu {
+	display: grid;
+	grid-area: menu;
+	background-color: #FFF8DC;
+    position:fixed; 
+	top: 100px;
+	left: 0px;
+	right: 0px;
+	height: 40px;
+	opacity: 0.8;
+}
+
+.slider {
+	display: grid;
+	grid-area: slider;
+	background-color: transparent;
+	/*background-size: cover;*/
+	grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.main {
+	display: grid;
+	grid-area: main;
+	grid-template-columns: repeat(4, 250px);
+	gap: 15px;
+	grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    /*margin-top: 20px; 
+    margin-left: 20px;
+    margin-bottom: 20px;*/
+
+}
+
+.main a {
+ height: min-content;
+ width: 80px;
+}
+
+/*.container, .slider, .main, .sidebar {
+	background-image: url(../img/jacob2.jpg);      
+background-position: center center;      
+background-repeat: no-repeat;      
+background-attachment: fixed;      
+background-size: cover;      
+background-color: #e69393;*/
+}
+
+
+.article {
+	display: grid;
+	grid-area: main;
+	/*grid-template-columns: repeat(4, 200px);
+	grid-template-rows: repeat(2, auto);*/
+	gap: 15px;
+	background-color: transparent;
+	/*grid-column-start: 1;
+    grid-column-end: 3;*/
+    grid-row-start: 4;
+    grid-row-end: 6;
+    margin-top: 20px; 
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+	display: grid;
+	grid-area: sidebar;
+	grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    /*margin-top: 20px;*/ 
+    margin-right: 20px;
+    border: 1.3px solid pink;
+    border-radius: 10px;
+}
+
+/*.extra {
+	display: grid;
+7	grid-area: extra;
+	background-color:purple;
+	grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    /*margin-left: 20px;
+    margin-right: 20px;*/
+
+
+.footer {
+	display: grid;
+	grid-area: footer;
+	background-color: whitesmoke;
+	grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 9;
+    align-items: center;
+    opacity: 0.6;
+}
+
+#logo {
+	background-image: url("../img/logo.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	
+}
+
+.search {
+    display: grid;
+	grid-template-columns: min-content min-content;
+	grid-column-start: 3; /*если убрать эту строчку, логотип почему-то уменьшается. как это работает? */
+	column-gap: 5px;
+	align-items: center;
+	justify-self: end;
+}
+
+.wrapper {
+  white-space: nowrap;
+}
+
+
+.menu a {
+    color: #a349a3;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.menu ul {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	text-decoration-line: none;
+}
+
+.menu li {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	text-decoration-line: none;
+}
+
+.menu li:hover {
+  transform: scale(1.2);
+}
+
+
+.box1 {
+ display: grid;
+ height: min-content;
+ width: 250px;
+ background: white;
+ border: 1.2px solid pink;
+ border-radius: 10px; /* картинки не влезают углами в радиус, как скруглить картинкам углы в таком случае? */
+ margin-top: 1px;
+ margin-left: 10px;
+
+}
+
+.box2 {
+ display: grid;
+ height: min-content;
+ width: 550px;
+ background: white;
+ border: 1.2px solid pink;
+ border-radius: 10px; 
+ margin-top: 1px;
+ margin-left: 10px;
+
+}
+
+.box9 {
+ display: grid;
+ /*height: min-content;*/
+ width: 515px;
+ background: white;
+ border: 1.2px solid pink;
+ border-radius: 10px; 
+ margin-top: 1px;
+ margin-left: 10px;
+}
+
+.box10 {
+ display: grid;
+ /*height: min-content;*/
+ width: 515px;
+ background: white;
+ border: 1.2px solid pink;
+ border-radius: 10px; 
+ margin-top: 1px;
+ margin-left: 10px;
+ grid-column-start: 3;
+
+}
+
+/*.main h3, p {
+text-align: center
+}*/
+
+.main a {
+ height: min-content;
+ width: 80px;
+}
+
+ .button {
+    background-color: #a349a3;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    margin-top: 10px;
+    border-radius: 6px;
+    }
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #a349a3;
+    }
+
+.button1:hover {
+    background-color: #a349a3;
+    color: white;
+    }
+
+
+.social {
+	width: 50px;
+    height: 50px;
+    justify-self: center;
+}
+
+.social a {	
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 0 10px 10px 0;
+    padding: 9px;
+}
+
+/* не олучилось таким методом сделать надпись на картинке, из-за того, что хэдер и меню зафиксированы, 
+надпись на них наезжает при прокрутке
+.img {
+	position: absolute;
+	width		: 100%;
+}
+
+.img > span {
+    position: absolute;
+	margin-top: 0px;
+	margin-left: 0px;
+	color: white;
+	background: #666;
+	padding: 10px;*/
+
+
+@media screen and (max-width: 1324px) {
+    
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        background-size: cover;
+   }
+
+} 
+
+@media screen and (max-width: 520px) {
+	.main {
+        background-size: cover;
+        grid-template-columns: repeat(2, auto);
+                grid-template-rows: repeat(4, auto);
+        grid-column-end: 2;
+
+   }
+
+.box1 {
+	width: 50%;
+}
+}
+
+
+
+
+
